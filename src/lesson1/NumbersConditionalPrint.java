@@ -76,6 +76,7 @@ public class NumbersConditionalPrint {
                 }
             }
         }
+        
         System.out.println("\n\nSorted array: ");
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
