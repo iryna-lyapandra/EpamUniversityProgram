@@ -9,11 +9,18 @@ import static lesson4.task1.Runner.getStringBuilderFromUser;
  */
 public class Runner {
     public static void main(String[] args) {
+        // Get user input
         StringBuilder input = getStringBuilderFromUser();
+
+        // Get the indexes, which will later be used to create substrings
         ArrayList<Integer> indexesOfSubstrings = getArrayOfIndexesForSubstring(input);
         System.out.println(indexesOfSubstrings);
+
+        // Generating the substrings that would fit into 1 line
         ArrayList<String> substrings = getSubstrings(input, indexesOfSubstrings);
-        //ArrayList<String> test3 = deleteSpaceAtTheEnd(substrings);
+
+        //Each loop prints out 81 symbols. If the line contains less than 81 symbol, the method
+        // adds the needed number of spaces before the line
         for (String t : substrings) {
             System.out.printf("%81s %n", t);
         }
@@ -45,6 +52,7 @@ public class Runner {
         return endIndex;
     }
 
+    // This method finds all the end indexes for substring and adds them into the resulting ArrayList of Integers
     public static ArrayList<Integer> getArrayOfIndexesForSubstring(StringBuilder sb) {
         ArrayList<Integer> result = new ArrayList();
         int startIndex = 0;
@@ -57,29 +65,16 @@ public class Runner {
         return result;
     }
 
+    // This method generates substrings of the StringBuilder,
+    // The array of indexes is used to asure that the substrings will contain less that 80 symbols.
     public static ArrayList<String> getSubstrings(StringBuilder sb, ArrayList<Integer> indexes) {
         ArrayList<String> substrings = new ArrayList<>();
         int start = 0;
         for (int index : indexes) {
             substrings.add(sb.substring(start, index));
-
             start = index;
         }
         return substrings;
     }
-    /*public static  ArrayList<String> deleteSpaceAtTheEnd ( ArrayList<String> input){
-        ArrayList<String> result = new ArrayList<>();
-        for (String s : input){
-            if (s.charAt(s.length()-1) == ' '){
-                String newString = s.substring(0, s.length()-2);
-                result.add(newString);
-            }
-            else {
-                result.add(s);
-            }
-        }
-        return result;
-    }
-    */
 }
 
