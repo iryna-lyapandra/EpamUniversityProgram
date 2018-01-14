@@ -2,9 +2,6 @@ package lesson4.task3;
 
 import java.util.Scanner;
 
-/**
- * Created by a on 1/14/2018.
- */
 public class RunnerTask3 {
     public static void main(String[] args) {
         String[] rotations = generateRotations();
@@ -57,6 +54,5 @@ public class RunnerTask3 {
         for (int i = 0; i < rotations.length; i++) {
             System.out.println(rotations[i]);
         }
-        System.out.println();
     }
 }
