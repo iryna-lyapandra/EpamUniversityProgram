@@ -7,8 +7,8 @@
 7.	SELECT * FROM labor_sql.printer WHERE NOT type =  "Matrix" AND price < 300 ORDER BY type DESC;
 8.	SELECT model, speed FROM labor_sql.pc WHERE price BETWEEN 400 AND 600 ORDER BY hd;
 9.	SELECT model, speed, hd FROM labor_sql.pc WHERE hd IN(10, 20) AND model IN (SELECT model FROM labor_sql.product WHERE maker = 'A')
-UNION ALL
-SELECT model, speed, hd FROM labor_sql.laptop WHERE hd IN(10, 20) AND model IN (SELECT model FROM labor_sql.product WHERE maker = 'A') ORDER BY speed;
+    UNION ALL
+    SELECT model, speed, hd FROM labor_sql.laptop WHERE hd IN(10, 20) AND model IN (SELECT model FROM labor_sql.product WHERE maker = 'A') ORDER BY speed;
 10.	SELECT model, speed, hd, price FROM labor_sql.laptop WHERE screen >=12 ORDER BY price DESC;
 11.	SELECT model, type, price FROM labor_sql.printer WHERE price < 300 ORDER BY price DESC;
 12.	SELECT model, ram, price FROM labor_sql.laptop WHERE ram = 64 ORDER BY screen;
@@ -27,4 +27,3 @@ SELECT model, speed, hd FROM labor_sql.laptop WHERE hd IN(10, 20) AND model IN (
 25.	SELECT trip_no, plane, town_from, town_to FROM labor_sql.trip WHERE plane = "TU-134" ORDER BY time_out DESC;
 26.	SELECT trip_no, plane, town_from, town_to FROM labor_sql.trip WHERE plane != "IL-86" ORDER BY plane;
 27.	SELECT trip_no, town_from, town_to FROM labor_sql.trip WHERE town_from != "Rostov" AND town_to != "Rostov" ORDER BY plane;
-28.	
