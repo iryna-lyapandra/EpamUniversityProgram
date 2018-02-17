@@ -1,6 +1,5 @@
 package lesson7;
 
-
 public class Ham extends PizzaDecorator{
     public Ham(Pizza pizza) {
         super(pizza);
