@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="candiesXSLT.xslt "?>
+
+<candies>
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="candyXSD.xsd">
+    <candy candyNo="0">
+        <name>romashka</name>
+        <energy>500</energy>
+        <type>chocolate candy</type>
+        <ingredients>
+            <ingredient>sugar</ingredient>
+            <ingredient>flour</ingredient>
+            <ingredient>cocoa</ingredient>
+            <ingredient>water</ingredient>
+            <ingredient>vanilla</ingredient>
+        </ingredients>
+
+        <value>
+            <protein>2</protein>
+            <fat>12.8</fat>
+            <carbs>80</carbs>
+        </value>
+        <production>roshen</production>>
+    </candy>
+
+    <candy candyNo="1">
+        <name>korivka</name>
+        <energy>450</energy>
+        <type>iris</type>
+        <ingredients>
+            <ingredient>sugar</ingredient>
+            <ingredient>flour</ingredient>
+            <ingredient>caramel</ingredient>
+            <ingredient>water</ingredient>
+            <ingredient>vanilla</ingredient>
+        </ingredients>
+
+        <value>
+            <protein>3</protein>
+            <fat>15.8</fat>
+            <carbs>76</carbs>
+        </value>
+        <production>roshen</production>>
+    </candy>
+
+
+</candies>
