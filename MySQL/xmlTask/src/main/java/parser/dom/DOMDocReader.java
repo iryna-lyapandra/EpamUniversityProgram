@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DOMDocReader {
-    public List<Candy> readDoc(Document doc){
+    public ArrayList<Candy> readDoc(Document doc){
         doc.getDocumentElement().normalize();
-        List<Candy> candies = new ArrayList<>();
+        ArrayList<Candy> candies = new ArrayList<>();
 
         NodeList nodeList = doc.getElementsByTagName("candy");
 

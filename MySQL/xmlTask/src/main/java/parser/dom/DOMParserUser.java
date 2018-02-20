@@ -4,10 +4,10 @@ import model.Candy;
 import org.w3c.dom.Document;
 
 import java.io.File;
-import java.util.List;
+import java.util.ArrayList;
 
 public class DOMParserUser {
-    public static List<Candy> getBeerList(File xml, File xsd){
+    public static ArrayList<Candy> getCandiesArrayList(File xml, File xsd){
         DOMDocCreator creator = new DOMDocCreator(xml);
         Document doc = creator.getDocument();
 
