@@ -14,6 +14,9 @@ ITransmission transmission;
     void stopEngine(){
         engine.stopEngine();
     }
+    void getTransmissionInfo(){
+        transmission.getInfo();
+    }
 
 
 
