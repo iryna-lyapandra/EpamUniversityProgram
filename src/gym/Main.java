@@ -8,11 +8,11 @@ public class Main {
         Treadmill treadmill = new Treadmill();
         Barbell barbell = new Barbell();
 
-        Exercise jogging = new Exercise("jogging", 20, "burning fat", "Set speed to 8 km/h", treadmill );
-        Exercise sprinting = new Exercise("sprinting", 10, "burning fat", "Set speed to 15 km/h", treadmill);
-        Exercise climbingUp = new Exercise("climbing up", 25, "burning fat", "Set speed to 6 km/h and incline to 5 degrees", treadmill);
-        Exercise bicepsEx = new Exercise("biceps exercise", 3, "building muscles", "Lift barbel with your biceps during 3 mins", barbell);
-        Exercise squatsWithBarbell = new Exercise("squats with barbell", 12, "building muscles", "Squat with the barbell", barbell );
+        Exercise jogging = new Jogging(20, treadmill);
+        Exercise sprinting = new Sprinting(10, treadmill);
+        Exercise climbingUp = new ClimbingUp(25, treadmill);
+        Exercise bicepsEx = new BicepsBarbellLift(3, barbell);
+        Exercise squatsWithBarbell = new SquatsWithBarbell(12, barbell);
 
         treadmill.addExercises(jogging);
         treadmill.addExercises(sprinting);
@@ -23,16 +23,16 @@ public class Main {
         List allEquipment = new ArrayList();
         allEquipment.add(treadmill);
         allEquipment.add(barbell);
-        ExerciseManager manager = new ExerciseManager(allEquipment);
 
-        FitnessProgram fitnessProgram = new FitnessProgram(manager);
-        fitnessProgram.addExcercisesByPurpose("burning fat");
-        fitnessProgram.addExcercisesByPurpose("building muscles");
-        System.out.println("Fitness program before sorting by time");
-        fitnessProgram.displayNeededEquipment();
+        FitnessProgram fitnessProgram = new FitnessProgram(allEquipment);
+        fitnessProgram.addExercisesByPurpose("burning fat");
+        fitnessProgram.addExercisesByPurpose("building muscles");
+
+        System.out.println("Fitness program BEFORE sorting by time");
+        fitnessProgram.displayEquipment();
         fitnessProgram.sortExercisesByTimeDesc();
-        System.out.println("\nFitness program after sorting by time");
-        fitnessProgram.displayNeededEquipment();
+        System.out.println("\nFitness program AFTER sorting by time");
+        fitnessProgram.displayEquipment();
 
     }
 }
