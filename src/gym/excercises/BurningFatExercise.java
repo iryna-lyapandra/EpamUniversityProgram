@@ -1,15 +1,17 @@
-package gym;
+package gym.excercises;
 
-public abstract class BuildingMusclesExercise implements Exercise{
+import gym.equipment.FitnessEquipment;
+
+public abstract class BurningFatExercise implements Exercise {
     private String name;
     private int minutesToComplete;
     private String purpose;
     private FitnessEquipment fitnessEquipment;
 
-    public BuildingMusclesExercise(String name, int minutesToComplete, FitnessEquipment fitnessEquipment) {
+    public BurningFatExercise(String name, int minutesToComplete, FitnessEquipment fitnessEquipment) {
         this.name = name;
         this.minutesToComplete = minutesToComplete;
-        this.purpose = "building muscles";
+        this.purpose = "burning fat";
         this.fitnessEquipment = fitnessEquipment;
     }
 

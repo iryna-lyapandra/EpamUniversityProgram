@@ -1,5 +1,8 @@
 package gym;
 
+import gym.equipment.FitnessEquipment;
+import gym.excercises.Exercise;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,6 +1,7 @@
-package gym;
+package gym.equipment;
 
-import java.util.ArrayList;
+import gym.excercises.Exercise;
+
 import java.util.List;
 
 public interface FitnessEquipment {

@@ -1,5 +1,9 @@
 package gym;
 
+import gym.equipment.Barbell;
+import gym.equipment.Treadmill;
+import gym.excercises.*;
+
 import java.util.ArrayList;
 import java.util.List;
 

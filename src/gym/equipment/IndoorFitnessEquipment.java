@@ -1,4 +1,6 @@
-package gym;
+package gym.equipment;
+
+import gym.excercises.Exercise;
 
 import java.util.ArrayList;
 import java.util.List;

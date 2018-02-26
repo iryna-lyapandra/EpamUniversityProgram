@@ -1,4 +1,6 @@
-package gym;
+package gym.excercises;
+
+import gym.equipment.FitnessEquipment;
 
 public interface Exercise extends Comparable{
         String getName();

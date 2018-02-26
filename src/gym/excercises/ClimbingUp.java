@@ -1,4 +1,6 @@
-package gym;
+package gym.excercises;
+
+import gym.equipment.FitnessEquipment;
 
 public class ClimbingUp extends BurningFatExercise {
     public ClimbingUp(int minutesToComplete, FitnessEquipment fitnessEquipment) {

@@ -1,4 +1,4 @@
-package gym;
+package gym.equipment;
 
 public class Barbell extends IndoorFitnessEquipment {
 
